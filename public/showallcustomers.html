@@ -1,0 +1,79 @@
+
+
+<div class="top-content">
+        	
+            <div class="inner-bg" ng-controller="basicinfoctlr">
+                <div class="container" ng-init="getAllCustomers();">
+                	
+                    <div class="row" style="margin-top:-80px;">
+                        <div class="col-sm-6 col-sm-offset-1 text">
+                            
+                            <div class="description">
+                            	<h1 style="font-size:16px;">All Customer
+                            	</h1>
+                            </div>
+                        </div>
+                    </div>
+                  
+    	<div class="col-md-12 table-responsive"><br>
+			<table class="table table-bordered  " id="tab_logic">
+				<thead>
+					<tr style="color:white" >
+						
+						 <th class="id text-center">Id</th>
+                        <th class="name text-center">Name</th>
+                        <th class="description text-center">Mobile No.</th>
+                        <th class="description text-center">Phone No.</th>
+						<th class="field3 text-center">DOB</th>
+                        <th class="field4 text-center">Flat</th>
+                        <th class="field5 text-center">Street</th>
+						<th class="field6 text-center">State</th>
+					
+        					<th class="text-center" >
+							Pin Code
+						</th>
+							<th class="text-center" >
+							Email
+						</th>
+						
+					</tr>
+				</thead>
+				
+				<tbody>
+					
+                    <tr ng-repeat="item in allCustomers" style="color:white">
+                        <td data-name="name">{{item.id}} </td>
+                        <td data-name="cost">{{item.name}}</td>
+                        <td data-name="cost">{{item.mobileno}} </td>
+                        <td data-name="cost">{{item.phoneno}}</td>
+                        <td data-name="cost">{{item.dob}} </td>
+                        <td data-name="cost">{{item.address.flat}}</td>
+						 <td data-name="cost">{{item.address.street}}</td>
+						 <td data-name="cost">{{item.address.state}} </td>
+						 <td data-name="cost">{{item.address.pincode}}</td>
+						 <td data-name="cost">{{item.email}}</td>
+						 
+                    </tr>
+            
+    			
+                        
+				</tbody>
+				    
+			</table>
+	
+	</div>
+						
+</div>
+
+                        	
+                      
+                    
+               
+            </div>
+            
+        </div>
+
+        <!-- Footer -->
+      
+
+    

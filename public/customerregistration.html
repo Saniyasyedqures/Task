@@ -1,0 +1,146 @@
+
+    
+<div class="row" ng-app="basicInfoModule" >
+    <div class="col-lg-12" ng-controller="basicinfoctlr" ng-init="genCode()" style="background:white;margin-top:-20px;">
+        <div class="col-md-4" style="border-right:dotted #f2f2f2;  height:auto">
+            <table width="100%" border="0" class="" ng-init=getcustomernames();>
+               <tr>
+                    <td width="75" height="35" colspan="2"><h3 style="color:#428bca">Search Records</h3><hr></td>
+
+                </tr>
+               
+            
+                <tr>
+                    <td width="75" height="35">Name</td>
+                    <td width="154">
+					 <input type="text" name="product" list="manufacturerlist" class="form-control"
+                                ng-model="custmrName" />
+                                <datalist id="manufacturerlist">
+                                    <option ng-repeat="customer in manufacturer">{{customer.name}}</option>
+
+                                </datalist>
+					</td>
+                </tr>
+                <tr>
+                    <td height="30">Mobile No. </td>
+                    <td><input type="text" name="textfield2" ng-model="mobile_no"  class="form-control" /></td>
+                </tr>
+				 <tr>
+                    <td height="30">Phone No. </td>
+                    <td><input type="text" name="textfield3" ng-model="phone_no"  class="form-control" /></td>
+                </tr>
+				 <tr>
+                    <td height="30">DOB </td>
+                    <td><input type="text" name="textfield4" ng-model="d_ob"  class="form-control" /></td>
+                </tr>
+				 <tr>
+                    <td height="30">State</td>
+                    <td><input type="text" name="textfield5" ng-model="stat_e"  class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right"><br><button type="submit" class="btn btn-info" ng-click="getcustomerlist()" >Search</button> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span class="help-in-line" style ="color:red; font-weight:bold;">{{searchErr}}</span></td></tr>
+                <tr>
+                    <td colspan="2"><hr /></td>
+                </tr>
+            </table>
+    
+                                <div class="dataTable_wrapper" style="text-align:center;overflow: scroll;height:415px" >
+            <table class="table table-striped" style="margin-top:10px;" width=100%><thead>  <tr>
+                       <th>Name</th>
+                       <th>Mobile No</th>
+				
+                   </tr></thead>
+                 <tbody> <tr ng-repeat="recods in custRecords" >
+					 <td data-ng-click="getCustomer(recods.name)" style="text-align:left">&nbsp;<a href="">{{recods.name}}</a></td>
+                       <td style="text-align:left">{{recods.mobileno}}</td>
+                   </tr></tbody>
+                  
+            </table>
+          </div></div>
+        <div class="col-md-8">
+         
+                <div class="col-lg-12">
+             
+                                <h3 style="color:#428bca">Add New Customer<hr></h3>
+                   <div class="col-md-12"><div class="col-md-1"></div>
+                   <div class="col-md-5">
+                    
+                        
+                           
+                         <label class="col-xs-4">Name<span ID="required" style="color:Red;" visible="false"> *</span></label>
+                             <div class="col-md-8" ><input class="form-control"  type="var" ng-model="name" id="cName">
+								 
+								 
+							
+								 
+								 <br>
+								 
+                     </div>
+                                  <label class="col-xs-4" >Email</label>
+                                        <div class="col-md-8" ><input class="form-control"  type="email"  ng-model="email" ><br>
+                                         
+                                   </div>
+					    <label class="col-xs-4" >DOB<span ID="required" style="color:Red;" visible="false"> *</span></label>
+                                        <div class="col-md-8" ><input class="form-control"  type="text"  ng-model="dob" placeholder="mm/dd/yy"><br>
+                                         
+                                   </div>
+					     <label class="col-xs-4" >Phone<span ID="required" style="color:Red;" visible="false"> *</span></label>
+                                        <div class="col-md-8" ><input class="form-control" type="text"  ng-model="phoneno" placeholder="XXX-XXXXXXXX"><br> </div>
+                            <label class="col-xs-4" >Mobile<span ID="required" style="color:Red;" visible="false"> *</span></label>
+                                        <div class="col-md-8" ><input class="form-control" type="text" ng-model="mobileno" placeholder="+91-XXXXXXXXXX">
+                                        
+                                           
+                                        <br></div>
+                          
+                                        
+                   </div>
+                          <div class="col-md-5">
+                     
+                            <label class="col-xs-3">Flat<span ID="required" style="color:Red;" visible="false"> *</span></label>
+                               <div class="col-md-9"><input type="text" class="form-control"   ng-model="flat" ><br></div> 
+							  
+                       <label class="col-xs-3" >Street<span ID="required" style="color:Red;" visible="false">*</span></label>
+                                        <div class="col-md-9" ><input class="form-control"  type="text"  ng-model="street" ><br>
+                                         
+                                   </div>
+							  <label class="col-xs-3" >State<span ID="required" style="color:Red;" visible="false"> *</span></label>
+                                        <div class="col-md-9" ><input class="form-control"  type="text"  ng-model="state" ><br>
+                                         
+                                   </div>
+							  <label class="col-xs-3" >Pin<span ID="required" style="color:Red;" visible="false"> *</span></label>
+                                        <div class="col-md-9" ><input class="form-control"  type="text"  ng-model="pincode" placeholder="XXXXXX" maxlength="7">
+                                         
+                                   </div>
+					   </div>
+                   </div>
+                       <div class="col-lg-12">
+                        <span class="help-in-line" style ="color:red; font-weight:bold;text-align:center">{{Isvalid_val}}</span>
+                    </div>
+                                
+                        <div class="form-group col-md-12"><br>
+                                    <div class="col-md-5"></div>
+                                       <div class="form-group col-md-2" >
+                                     <button type="submit" class="form-control btn-primary" ng-click="saveCustomer()"ng-hide="save">Save</button>
+                                           <button type="submit" class="form-control btn-info" ng-click="UpdateCustomer(id)" ng-hide="update">Update</button>
+                                       
+                                     </div>
+							
+                                     <div class="form-group col-md-2" >
+                                         <button type="submit" class="form-control btn-danger" ng-click="Cancel()">Cancel</button></div>
+							<div class="form-group col-md-2" >
+								<button type="submit" class="form-control btn-info" ng-click="DeleteCustomer(id)" ng-hide="update">Delete</button></div><br><br>
+                                   
+                        <div class="col-md-1"></div>    </div>         
+              
+                        </div>
+</div>
+                </div>
+            
+    </div>
+            
+<!-- /.row -->

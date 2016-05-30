@@ -1,0 +1,26 @@
+{
+"name":"device-management-22781",
+"version":"0.0.1",
+"description":"compare and book lab test online",
+"main":"app.js",
+"scripts":{
+"start":"node app.js"
+},
+"dependencies":{
+"express": "^4.8.7",
+"body-parser":"^1.13.1",
+},
+"repository":{
+"type":"git",
+"url":"https://git.heroku.com/device-management-22781.git"
+},
+"engines":{
+"node":"0.12.2"
+},
+"keywords":[
+"node",
+"heroku",
+"express"
+],
+"license":"None"
+}

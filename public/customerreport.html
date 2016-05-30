@@ -1,0 +1,74 @@
+
+
+<div class="top-content">
+        	
+            <div class="inner-bg" ng-controller="basicinfoctlr">
+                <div class="container" ng-init="getcusomerBillRecords();">
+                	
+                    <div class="row" style="margin-top:-80px;">
+                        <div class="col-sm-6 col-sm-offset-1 text">
+                            
+                            <div class="description">
+                            	<h1 style="font-size:16px;">Customer Bill Report
+                            	</h1>
+                            </div>
+                        </div>
+                    </div>
+					
+                  
+    	<div class="col-md-12 table-responsive"><br>
+			<table class="table table-bordered  " id="tab_logic">
+				<thead>
+					<tr style="color:white" >
+						
+						
+                        <th class="name text-center">Name</th>
+                        <th class="description text-center">Mobile No.</th>
+                        <th class="description text-center">Phone No.</th>
+						<th class="text-center" >
+							Email
+						</th>
+						<th class="field3 text-center">No Of Bills</th>
+                        <th class="field4 text-center">Amount</th>
+                        <th class="field5 text-center">Avg Amount</th>
+						
+						
+					</tr>
+				</thead>
+				
+				<tbody>
+					
+                    <tr ng-repeat="item in billrecords" style="color:white">
+                        
+                        <td data-name="cost">{{item.name}}</td>
+                        <td data-name="cost">{{item.mobileno}} </td>
+                        <td data-name="cost">{{item.phoneno}}</td>
+                		 <td data-name="cost">{{item.email}}</td>
+						 <td data-name="cost">{{item.noofbills}}</td>
+						 <td data-name="cost">{{item.amount}}</td>
+						 <td data-name="cost">{{item.avgamount}}</td>
+						 
+                    </tr>
+            
+    			
+                        
+				</tbody>
+				    
+			</table>
+	
+	</div>
+						
+</div>
+
+                        	
+                      
+                    
+               
+            </div>
+            
+        </div>
+
+        <!-- Footer -->
+      
+
+    

@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Lab Info</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/main.css" rel="stylesheet">
+	 <link href="css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/jquery-ui.structure.css">
+	<link rel="stylesheet" href="css/jquery-ui.theme.css">
+	<link rel="stylesheet" href="css/fullscreendialog.css">
+	<link rel="shortcut icon" href="images/favicon.ico">         
+      <link rel="stylesheet" href="assets/css/fontstyle.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+     
+			  
+	
+  </head><!--/head-->
+
+<body ng-app="basicInfoModule" ng-controller="basicinfoctlr" >
+<nav class="navbar " style="background:#f2f2f2;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#main" ><b style="color:Green;font-size:25px;">Customer App</b></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+ <!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>	
+
+<!-- Content -->
+<div class="col-md-12">
+  	<div class="row" >
+      <div class="col-sm-2"  style="background:#f2f2f2;height:800px;margin-top:-21px;">
+		  <br>
+          <ul id="sidebar" class="nav nav-stacked affix">
+            <li><a data-toggle="collapse" href="#pateintregistration">Add Customer</a></li>
+			
+            <li><a data-toggle="collapse" href="#showallcutomers">Show All Customers</a></li>
+			
+            <li><a data-toggle="collapse" href="#customerreport">Customer Report</a></li>
+			
+            <li><a data-toggle="collapse" href="#reportbyname">Search Customer Report By Name</a></li>
+			 
+          
+           
+        </ul>
+      </div>
+      <div class="col-sm-10">
+     <div ng-view ></div>
+      </div>
+ 
+    </div>
+</div>
+	
+	   <script src="js/jquery.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/main.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/ui-bootstrap-tpls-0.13.3.min.js"></script>
+    <script src="js/angularModalService.js"></script>
+	  <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+	<script src="controller/basicInfoController.js"></script> 
+	<script src="controller/inputValidation.js"></script> 
+	<script src="controller/commonservice.js"></script> 
+	
+</body>
+	
+</body>
+</html>

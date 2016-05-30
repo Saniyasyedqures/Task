@@ -1,0 +1,104 @@
+
+
+<div class="top-content">
+        	
+            <div class="inner-bg" ng-controller="basicinfoctlr">
+                <div class="container" >
+                	
+                    <div class="row" style="margin-top:-80px;">
+                        <div class="col-sm-6 col-sm-offset-1 text">
+                            
+                            <div class="description">
+                            	<h1 style="font-size:16px;">Search Customer Report By Name
+                            	</h1>
+                            </div>
+                        </div>
+                    </div>
+					<div class="row" >
+                        <div class="col-sm-12" ng-init="getcustomernames();">
+                            
+                           
+                            	<label class="col-sm-3" style="color:white">Enter Customer Name</label>
+                           
+							
+							
+							 <input type="text" name="product" list="manufacturerlist" class="col-md-6"
+                                ng-model="customername" />
+                                <datalist id="manufacturerlist">
+                                    <option ng-repeat="customer in manufacturer">{{customer.name}}</option>
+
+                                </datalist>
+							
+							
+							<button class="btn btn-default" style="width:150px;" ng-click="getcustomerByName();">Search</button>
+                        </div>
+                    </div>
+                  
+    	<div class="col-md-12 table-responsive"><br>
+			<table class="table table-bordered  " id="tab_logic" >
+				<thead>
+					<tr style="color:white" >
+						
+						
+                        <th class="name text-center">Name</th>
+                        <th class="description text-center">Mobile No.</th>
+                        <th class="description text-center">Phone No.</th>
+						<th class="text-center" >
+							Email
+						</th>
+						<th class="field3 text-center">No Of Bills</th>
+                        <th class="field4 text-center">Amount</th>
+                        <th class="field5 text-center">Avg Amount</th>
+						
+						
+					</tr>
+				</thead>
+				
+				<tbody>
+					
+                    <tr ng-repeat="item in billrecords" style="color:white">
+                        
+                        <td data-name="cost">{{item.name}}</td>
+                        <td data-name="cost">{{item.mobileno}} </td>
+                        <td data-name="cost">{{item.phoneno}}</td>
+                		 <td data-name="cost">{{item.email}}</td>
+						 <td data-name="cost">{{item.noofbills}}</td>
+						 <td data-name="cost">{{item.amount}}</td>
+						 <td data-name="cost">{{item.avgamount}}</td>
+						 
+                    </tr>
+            
+    			
+                        
+				</tbody>
+				    
+			</table>
+	
+	</div>
+	  <div class="col-sm-12" style="margin-top:30px;">
+                           	<label class="col-sm-3" style="color:white">Amount Of Each Bill</label>
+                           <input type="text" class="col-md-6" ng-model="amtofeachbill" disabled>
+                        </div>	
+					  <div class="col-sm-12"><br>
+                           	<label class="col-sm-3" style="color:white">Discount Amount</label>
+                           <input type="text" class="col-md-6" ng-model="discountamt" disabled>
+                        </div>	
+					  <div class="col-sm-12"><br>
+                           	<label class="col-sm-3" style="color:white">Tax Amount</label>
+                           <input type="text" class="col-md-6" ng-model="taxamt" disabled>
+                        </div>	
+						
+</div>
+
+                        	
+                      
+                    
+               
+            </div>
+            
+        </div>
+
+        <!-- Footer -->
+      
+
+    
